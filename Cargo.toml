@@ -1,7 +1,7 @@
 [package]
 name = "rusync"
 version = "0.7.0"
-authors = ["Dimitri Merejkowsky <d.merej@gmail.com>"]
+authors = ["Dimitri Merejkowsky <d.merej@gmail.com>", "Ahmed Masud <ahmed.masud@saf.ai"]
 
 readme = "README.md"
 description = "Minimalist rsync clone in Rust"
@@ -14,14 +14,22 @@ repository = "https://github.com/dmerejkowsky/rusync"
 
 edition = "2018"
 
+[lib]
+name = "rusync"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rusync"
+path = "src/main.rs"
+
 [dependencies]
 anyhow = "1.0.36"
-colored = "1.6"
-filetime = "0.1"
+colored = "2.0.0"
+filetime = "0.2.15"
 humansize = "1.1.0"
 humantime = "2.0.1"
-pathdiff = "0.1.0"
-structopt = "0.2.8"
+pathdiff = "0.2.1"
+structopt = "0.3.25"
 term_size = "0.3"
 
 [dev-dependencies]

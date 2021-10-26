@@ -43,9 +43,9 @@ fn is_more_recent_than(src: &Entry, dest: &Entry) -> bool {
     let src_mtime = FileTime::from_last_modification_time(&src_meta);
     let dest_mtime = FileTime::from_last_modification_time(&dest_meta);
 
-    let src_precise = src_mtime.seconds() * 1000 * 1000 * 1000 + u64::from(src_mtime.nanoseconds());
+    let src_precise = src_mtime.seconds() * 1000 * 1000 * 1000 + i64::from(src_mtime.nanoseconds());
     let dest_precise =
-        dest_mtime.seconds() * 1000 * 1000 * 1000 + u64::from(dest_mtime.nanoseconds());
+        dest_mtime.seconds() * 1000 * 1000 * 1000 + i64::from(dest_mtime.nanoseconds());
 
     src_precise > dest_precise
 }
