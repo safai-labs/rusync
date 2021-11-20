@@ -12,7 +12,7 @@ categories = ["command-line-utilities"]
 
 repository = "https://github.com/dmerejkowsky/rusync"
 
-edition = "2018"
+edition = "2021"
 
 [lib]
 name = "rusync"
@@ -33,4 +33,4 @@ structopt = "0.3.25"
 term_size = "0.3"
 
 [dev-dependencies]
-tempdir = "0.3"
+tempfile = "3.2.0"
