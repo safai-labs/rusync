@@ -5,3 +5,4 @@ test/
 dest/
 
 .rusync.errlist
+tests/data/**
